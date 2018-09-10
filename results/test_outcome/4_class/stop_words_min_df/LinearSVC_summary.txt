@@ -1,0 +1,33 @@
+Classifier: LinearSVC
+Params: {'C': 1.0, 'class_weight': None, 'dual': True, 'fit_intercept': True, 'intercept_scaling': 1, 'loss': 'squared_hinge', 'max_iter': 1000, 'multi_class': 'ovr', 'penalty': 'l2', 'random_state': None, 'tol': 0.0001, 'verbose': 0}
+
+Labels: ['positive', 'negative', 'indeterminate', '*missing']
+
+Training accuracy: 0.9964565905249014
+Training confusion matrix:
+[[15322    14     8    34]
+ [   19 12115    16    31]
+ [   15    29  1109    20]
+ [   36    83    22 63411]]
+
+Accuracy: 0.9919379307355555
+
+Precision: [0.9917 0.9772 0.9114 0.9963]
+Mean: 0.9691617019171708
+Std: 0.034061839135104556
+
+Recall: [0.9915 0.9861 0.8821 0.9951]
+Mean: 0.963706321657112
+Std: 0.04720099349817657
+
+F1 score: [0.9916 0.9816 0.8966 0.9957]
+Mean: 0.9663691097126095
+Std: 0.04063323624567469
+
+Cohen Kappa score: 0.9833156512739755
+Confusion matrix:
+[[ 3838     9     4    20]
+ [   11  3044     5    27]
+ [    4    17   247    12]
+ [   17    45    15 15756]]
+

@@ -1,0 +1,33 @@
+Classifier: MLPClassifier
+Params: {'activation': 'relu', 'alpha': 0.0001, 'batch_size': 'auto', 'beta_1': 0.9, 'beta_2': 0.999, 'early_stopping': False, 'epsilon': 1e-08, 'hidden_layer_sizes': (100,), 'learning_rate': 'constant', 'learning_rate_init': 0.001, 'max_iter': 200, 'momentum': 0.9, 'nesterovs_momentum': True, 'power_t': 0.5, 'random_state': None, 'shuffle': True, 'solver': 'adam', 'tol': 0.0001, 'validation_fraction': 0.1, 'verbose': False, 'warm_start': False}
+
+Labels: ['positive', 'negative', 'indeterminate', '*missing']
+
+Training accuracy: 0.9988296996229032
+Training confusion matrix:
+[[15317     6     0     4]
+ [    3 12118    16    15]
+ [   19     9  1138     4]
+ [    9     9    14 63603]]
+
+Accuracy: 0.9921113085691994
+
+Precision: [0.9868 0.9865 0.8885 0.9964]
+Mean: 0.9645547905081436
+Std: 0.04409145083629557
+
+Recall: [0.9913 0.9830 0.9011 0.9957]
+Mean: 0.9677820175332955
+Std: 0.03879326697628247
+
+F1 score: [0.9891 0.9847 0.8947 0.9961]
+Mean: 0.9661552917341026
+Std: 0.041432436503722476
+
+Cohen Kappa score: 0.983798749490253
+Confusion matrix:
+[[ 3888     8     7    19]
+ [   14  3063    12    27]
+ [   11     7   255    10]
+ [   27    27    13 15683]]
+

@@ -1,0 +1,22 @@
+Negative features:
+[('non reactive', -2.2784166828661623),
+ ('trichomonas vaginalis', -1.718709198339899),
+ ('reactive result', -1.7083470139455406),
+ ('hepatitis interpretation', -1.6283493114181002),
+ ('no trichomonas', -1.6071945795359366),
+ ('no trichomonas vaginalis', -1.6071945795359366),
+ ('of hcv', -1.4669891582716268),
+ ('evidence of hcv', -1.3636982906082822),
+ ('lgv 16', -1.327220498098499),
+ ('dna detected', -1.3104781903186797)]
+Positive features:
+[('equivocal for', 2.2256148150517663),
+ ('nonspecific reactivity', 1.9150776202459974),
+ ('borderline reactive', 1.8920351497586143),
+ ('equivocal please', 1.8804655222671587),
+ ('indeterminate for', 1.7498165853440169),
+ ('result inconclusive', 1.4675254404530536),
+ ('lgv 64', 1.344849698016655),
+ ('lgv 32', 1.3032254680345787),
+ ('trachomatis inconclusive', 1.2527227319842964),
+ ('equivocal hiv', 1.2440861185346896)]

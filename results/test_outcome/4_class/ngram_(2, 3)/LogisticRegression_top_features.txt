@@ -1,0 +1,22 @@
+Negative features:
+[('non reactive', -5.267124036178817),
+ ('reactive previous', -4.03264196239531),
+ ('neisseria gonorrhoeae', -2.647619417173855),
+ ('streptococcus pneumoniae', -2.5650593149368235),
+ ('rna detected', -2.2742190905082396),
+ ('trichomonas vaginalis', -2.2457373729037347),
+ ('no trichomonas', -2.1452799493739216),
+ ('no trichomonas vaginalis', -2.1452799493739216),
+ ('weakly reactive', -2.027827870608642),
+ ('reactive non', -1.9657335244275884)]
+Positive features:
+[('not calculated', 6.684835701816503),
+ ('non reactive current', 4.143516671392583),
+ ('non reactive previous', 3.8945678532949675),
+ ('test not', 2.23332489038468),
+ ('not performed', 2.0960821090971464),
+ ('refer to', 2.026082463800621),
+ ('for results', 1.9777842713225737),
+ ('test not performed', 1.962648370824277),
+ ('test cancelled', 1.7280284514544018),
+ ('not processed', 1.7252898772376102)]

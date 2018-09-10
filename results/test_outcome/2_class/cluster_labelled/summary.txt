@@ -1,0 +1,10 @@
+Cluster 0:
+positive    6779
+negative      22
+Name: test_outcome, dtype: int64
+
+Cluster 1:
+negative    15246
+positive    12470
+Name: test_outcome, dtype: int64
+

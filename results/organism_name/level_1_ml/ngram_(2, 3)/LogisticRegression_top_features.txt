@@ -1,0 +1,22 @@
+Negative features:
+[('positive for', -2.6006438188529675),
+ ('influenza virus', -2.584807503619025),
+ ('identified as', -2.331958443836628),
+ ('escherichia coli', -2.106145096808753),
+ ('virus type', -1.9514445663504014),
+ ('streptococcus pneumoniae', -1.723730174224108),
+ ('reactive minimal', -1.6628458497643344),
+ ('shigella flexneri', -1.6403945295457385),
+ ('as salmonella', -1.6250768462330774),
+ ('serotyped as salmonella', -1.5925416093398341)]
+Positive features:
+[('non reactive', 3.4194762998739994),
+ ('no bordetella pertussis', 2.8373147933201945),
+ ('no bordetella', 2.8373147933201945),
+ ('no chlamydia trachomatis', 2.7359326368652903),
+ ('no chlamydia', 2.7359326368652903),
+ ('as not', 2.6622542373399143),
+ ('no virus', 2.3043656237341072),
+ ('negative for', 2.1157476121490237),
+ ('no diplococci resembling', 2.1015682808879688),
+ ('no diplococci', 2.1015682808879688)]

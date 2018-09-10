@@ -1,0 +1,22 @@
+Negative features:
+[('non reactive', -2.189076566588237),
+ ('reactive previous', -2.095551429034307),
+ ('streptococcus pneumoniae', -1.459553879499179),
+ ('weakly reactive', -1.418093995592886),
+ ('neisseria gonorrhoeae', -1.3482470406190894),
+ ('lgv 16', -1.3378453209227696),
+ ('reactive nonconfirmable', -1.2776414847389426),
+ ('xanthochromic sample', -1.2731536969453126),
+ ('weak reactive', -1.269677268160649),
+ ('sample lipemic', -1.2696686368088381)]
+Positive features:
+[('not calculated', 3.5880636055242916),
+ ('26jul 2017', 2.7559749004854055),
+ ('non reactive previous', 2.282956722807333),
+ ('non reactive current', 2.1946485532835536),
+ ('21 jan 2017', 1.811014615507266),
+ ('25 nov 2016', 1.4829382782140008),
+ ('invalid result', 1.182446578440778),
+ ('collected 14 feb', 1.1405993260111802),
+ ('collected 31 mar', 1.0170727099464474),
+ ('collected 18 october', 1.0153829368598848)]

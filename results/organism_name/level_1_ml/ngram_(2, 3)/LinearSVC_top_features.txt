@@ -1,0 +1,22 @@
+Negative features:
+[('reactive minimal', -1.5568255230115802),
+ ('shigella flexneri', -1.3268268309351836),
+ ('weakly reactive', -1.3172983347767622),
+ ('influenza virus', -1.283344490885551),
+ ('streptococcus pneumoniae', -1.2825012234213777),
+ ('hiv reactive', -1.2793987634886363),
+ ('salmonella paratyphi', -1.2068260244289335),
+ ('shigella sonnei', -1.1945614940253781),
+ ('salmonella typhimurium', -1.1941296461541162),
+ ('o26 nm', -1.1827366820574614)]
+Positive features:
+[('amplification test positive', 1.1937936266410172),
+ ('as not', 1.1441407759379583),
+ ('helicobacter pylori', 1.021965254347153),
+ ('no bordetella pertussis', 1.0141946508436006),
+ ('no bordetella', 1.0141946508436006),
+ ('no hiv', 0.9959920835366888),
+ ('no diplococci resembling', 0.9880202388466244),
+ ('no diplococci', 0.9880202388466244),
+ ('no chlamydia trachomatis', 0.9779249890155362),
+ ('no chlamydia', 0.9779249890155362)]

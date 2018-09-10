@@ -1,0 +1,22 @@
+Negative features:
+[('reactive result', -1.5316160676437247),
+ ('non lgv 128', -1.3735658422695387),
+ ('lgv 16', -1.113692171537615),
+ ('reactive hbeag', -1.0111832322224026),
+ ('non reactive', -0.9766166255598326),
+ ('hepatitis interpretation', -0.8727405722748347),
+ ('reactive anti hbe', -0.8534577371013248),
+ ('1000 000', -0.7865296512584279),
+ ('lgv an', -0.7286018349052201),
+ ('lgv an igg', -0.7286018349052201)]
+Positive features:
+[('equivocal please', 1.5920988518838748),
+ ('borderline reactive', 1.5476717997561251),
+ ('nonspecific reactivity', 1.3045313837028627),
+ ('test negative', 1.250886924722605),
+ ('equivocal for', 1.1834197567101177),
+ ('report results', 1.133928462881517),
+ ('result inconclusive', 1.0553402331588826),
+ ('hep equivocal', 1.0366416750416791),
+ ('hbsag equivocal', 1.0161827240289725),
+ ('equivocal anti', 1.0140807949448987)]

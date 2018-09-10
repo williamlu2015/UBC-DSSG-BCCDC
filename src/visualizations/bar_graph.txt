@@ -1,0 +1,34 @@
+import matplotlib.pyplot as plt
+
+from src.util.io import write_matplotlib_figure
+
+
+def bar_graph(X, Y, color, rotation, xlabel, ylabel, title, output_filename,
+              ylim=None, width=None):
+    if len(X) != len(Y):
+        raise ValueError
+
+    dpi = 218
+    plt.figure(num=1).set_size_inches(2880 / dpi, 2880 / dpi)   # 5120
+
+    n = len(X)
+    if width is not None:
+        plt.bar(range(n), Y, align="center", color=color, width=width)
+    else:
+        plt.bar(range(n), Y, align="center", color=color)
+    plt.yticks(fontsize=36)
+    plt.xticks(range(n), X, rotation=rotation, fontsize=36)
+
+    plt.title(title, fontsize=48)
+    plt.xlabel(xlabel, fontsize=36)
+    plt.ylabel(ylabel, fontsize=36)
+
+    if ylim is not None:
+        plt.ylim(ylim)
+
+    plt.tight_layout()
+
+    if output_filename is not None:
+        write_matplotlib_figure(output_filename, plt)
+
+    plt.show()

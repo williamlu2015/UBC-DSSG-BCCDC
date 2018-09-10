@@ -1,0 +1,376 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+from datetime import datetime
+
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_selection import SelectKBest, chi2
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, confusion_matrix
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.svm import LinearSVC
+
+from root import from_root
+from src.analysis.ml_trials.clustering import cluster_labelled_1000_features_pca
+from src.analysis.ml_trials.visualizations import pca_2d
+from src.modules.classifier import top_features
+from src.modules.db import extract
+from src.modules.feature_selector import select
+from src.modules.vectorizer import to_X_y
+from src.util.io import write_matplotlib_figure
+from src.visualizations.bar_graph import bar_graph
+
+
+def main():
+    #create_binary_test_outcome_multibar_graph()
+    #get_binary_test_outcome_confusion()
+    #get_test_performed_confusion()
+    #get_test_performed_balanced_confusion()
+    #get_test_performed_balanced_trigrams_confusion()
+    #test_performed_rf()
+    #get_4_class_test_outcome_balanced_confusion()
+    #get_4_class_test_outcome_confusion()
+    #tp_rf_bar_graph()
+    #to_4c_multibar_graph()
+    #to_4c_trend()
+    #to_4c_chi2_trend()
+
+
+def create_binary_test_outcome_multibar_graph():
+    accuracies = _get_bto_accuracies()
+    _draw_bto_graph(accuracies)
+
+
+def _get_bto_accuracies():
+    df = extract(from_root("sql\\test_outcome\\2_class.sql"))
+    df_train, df_test = train_test_split(df, test_size=0.2)
+
+    vectorizer = CountVectorizer()
+    X_train, y_train, X_test, y_test, _, _ \
+        = to_X_y(vectorizer, df_train, df_test, "test_outcome")
+
+    accuracies = []
+    for classifier in [
+        MultinomialNB(),
+        LogisticRegression(),
+        RandomForestClassifier(n_estimators=100),
+        LinearSVC()
+    ]:
+        classifier.fit(X_train, y_train)
+        y_pred = classifier.predict(X_test)
+
+        accuracies.append(accuracy_score(y_test, y_pred))
+    return accuracies
+
+
+def _draw_bto_graph(accuracies):
+    X = [
+        "NB", "LR", "RF", "SVM"
+    ]
+
+    bar_graph(X, accuracies, color="blue", rotation=0, xlabel="Classifier",
+              ylabel="Accuracy", title="Binary Test Outcome",
+              output_filename=from_root("images\\final\\bto_graph.png"),
+              ylim=(0.9, 1.0), width=0.25)
+
+
+def get_binary_test_outcome_confusion():
+    df = extract(from_root("sql\\test_outcome\\2_class.sql"))
+    df_train, df_test = train_test_split(df, test_size=0.2)
+
+    vectorizer = CountVectorizer()
+    X_train, y_train, X_test, y_test, _, _ \
+        = to_X_y(vectorizer, df_train, df_test, "test_outcome")
+
+    labels = ["positive", "negative"]
+
+    for classifier in [RandomForestClassifier(n_estimators=100), LinearSVC()]:
+        classifier.fit(X_train, y_train)
+
+        y_pred = classifier.predict(X_test)
+        print(confusion_matrix(y_test, y_pred, labels=labels))
+
+
+def get_test_performed_confusion():
+    df = extract(from_root("sql\\test_performed.sql"))
+    df_train, df_test = train_test_split(df, test_size=0.2)
+
+    vectorizer = CountVectorizer()
+    X_train, y_train, X_test, y_test, _, _ \
+        = to_X_y(vectorizer, df_train, df_test, "test_performed")
+
+    labels = ["yes", "no"]
+
+    classifier = LinearSVC()
+    classifier.fit(X_train, y_train)
+
+    y_pred = classifier.predict(X_test)
+    print(accuracy_score(y_test, y_pred))
+    print(confusion_matrix(y_test, y_pred, labels=labels))
+
+
+def get_test_performed_balanced_confusion():
+    df = extract(from_root("sql\\test_performed.sql"))
+    df_train, df_test = train_test_split(df, test_size=0.2)
+
+    vectorizer = CountVectorizer()
+    X_train, y_train, X_test, y_test, _, _ \
+        = to_X_y(vectorizer, df_train, df_test, "test_performed")
+
+    labels = ["yes", "no"]
+
+    classifier = LinearSVC(class_weight="balanced")
+    classifier.fit(X_train, y_train)
+
+    y_pred = classifier.predict(X_test)
+    print(accuracy_score(y_test, y_pred))
+    print(confusion_matrix(y_test, y_pred, labels=labels))
+
+
+def get_test_performed_balanced_trigrams_confusion():
+    df = extract(from_root("sql\\test_performed.sql"))
+    df_train, df_test = train_test_split(df, test_size=0.2)
+
+    vectorizer = CountVectorizer(ngram_range=(1, 3))
+    X_train, y_train, X_test, y_test, _, _ \
+        = to_X_y(vectorizer, df_train, df_test, "test_performed")
+
+    labels = ["yes", "no"]
+
+    classifier = LinearSVC(class_weight="balanced")
+    classifier.fit(X_train, y_train)
+
+    y_pred = classifier.predict(X_test)
+    print(accuracy_score(y_test, y_pred))
+    print(confusion_matrix(y_test, y_pred, labels=labels))
+
+
+def get_4_class_test_outcome_confusion():
+    df = extract(from_root("sql\\test_outcome\\4_class.sql"))
+    df_train, df_test = train_test_split(df, test_size=0.2)
+
+    vectorizer = CountVectorizer()
+    X_train, y_train, X_test, y_test, _, _ \
+        = to_X_y(vectorizer, df_train, df_test, "test_outcome")
+
+    labels = ["positive", "negative", "indeterminate", "*missing"]
+
+    for classifier in [RandomForestClassifier(n_estimators=100, n_jobs=-1), LinearSVC()]:
+        classifier.fit(X_train, y_train)
+
+        y_pred = classifier.predict(X_test)
+        print(confusion_matrix(y_test, y_pred, labels=labels))
+
+
+def get_4_class_test_outcome_balanced_confusion():
+    df = extract(from_root("sql\\test_outcome\\4_class.sql"))
+    df_train, df_test = train_test_split(df, test_size=0.2)
+
+    vectorizer = CountVectorizer()
+    X_train, y_train, X_test, y_test, _, _ \
+        = to_X_y(vectorizer, df_train, df_test, "test_outcome")
+
+    labels = ["positive", "negative", "indeterminate", "*missing"]
+
+    for classifier in [RandomForestClassifier(n_estimators=100, n_jobs=-1, class_weight="balanced"),
+                       LinearSVC(class_weight="balanced")]:
+        classifier.fit(X_train, y_train)
+
+        y_pred = classifier.predict(X_test)
+        print(confusion_matrix(y_test, y_pred, labels=labels))
+
+
+def test_performed_rf():
+    df = extract(from_root("sql\\test_performed.sql"))
+    df_train, df_test = train_test_split(df, test_size=0.2)
+
+    vectorizer = CountVectorizer()
+    X_train, y_train, X_test, y_test, _, _ \
+        = to_X_y(vectorizer, df_train, df_test, "test_performed")
+
+    labels = ["yes", "no"]
+
+    for classifier in [
+        RandomForestClassifier(n_estimators=100, n_jobs=-1),
+        RandomForestClassifier(
+            n_estimators=100, class_weight="balanced", n_jobs=-1)
+    ]:
+        classifier.fit(X_train, y_train)
+
+        y_pred = classifier.predict(X_test)
+        print(accuracy_score(y_test, y_pred))
+        print(confusion_matrix(y_test, y_pred, labels=labels))
+
+
+def tp_rf_bar_graph():
+    df = extract(from_root("sql\\test_performed.sql"))
+    df_train, df_test = train_test_split(df, test_size=0.2)
+
+    vectorizer = CountVectorizer(ngram_range=(1, 3))
+    X_train, y_train, _, _, feature_names, _ \
+        = to_X_y(vectorizer, df_train, df_test, "test_performed")
+
+    classifier = RandomForestClassifier(n_estimators=100, n_jobs=-1)
+    classifier.fit(X_train, y_train)
+
+    weights = top_features(classifier, feature_names)[:10]
+
+    X = [x[0] for x in weights]
+    Y = [x[1] for x in weights]
+    bar_graph(
+        X, Y, color="orange", rotation=60, xlabel="Feature names",
+        ylabel="Feature importances",
+        title="10 most important features (ranked by Random Forest)",
+        output_filename=from_root("images\\final\\test_performed_rf_ngram.png")
+    )
+
+
+def to_4c_multibar_graph():
+    accuracies = _get_to_4c_accuracies()
+    X = ["NB", "LR", "RF", "SVM"]
+
+    bar_graph(X, accuracies, color="blue", rotation=0, xlabel="Classifier",
+              ylabel="Accuracy", title="4 Class Test Outcome",
+              output_filename=from_root("images\\final\\to_4c_graph.png"),
+              ylim=(0.9, 1.0), width=0.25)
+
+
+def _get_to_4c_accuracies():
+    df = extract(from_root("sql\\test_outcome\\4_class.sql"))
+    df_train, df_test = train_test_split(df, test_size=0.2)
+
+    vectorizer = CountVectorizer()
+    X_train, y_train, X_test, y_test, _, _ \
+        = to_X_y(vectorizer, df_train, df_test, "test_outcome")
+
+    accuracies = []
+    for classifier in [
+        MultinomialNB(),
+        LogisticRegression(),
+        RandomForestClassifier(n_estimators=100),
+        LinearSVC()
+    ]:
+        classifier.fit(X_train, y_train)
+        y_pred = classifier.predict(X_test)
+
+        accuracies.append(accuracy_score(y_test, y_pred))
+    return accuracies
+
+
+def to_4c_trend():
+    X = list(range(50, 5000 + 1, 50))
+    datum = [[], [], [], []]
+
+    df = extract(from_root("sql\\test_outcome\\4_class.sql"))
+    for size in range(50, 5000 + 1, 50):
+        print(size)
+        df_curr = df.sample(size)
+
+        df_train, df_test = train_test_split(df_curr, test_size=0.2)
+
+        vectorizer = CountVectorizer()
+        X_train, y_train, X_test, y_test, feature_names, _ \
+            = to_X_y(vectorizer, df_train, df_test, "test_outcome")
+
+        for index, classifier in enumerate([
+            MultinomialNB(),
+            LogisticRegression(class_weight="balanced"),
+            RandomForestClassifier(n_estimators=100, class_weight="balanced"),
+            LinearSVC(class_weight="balanced")
+        ]):
+            classifier.fit(X_train, y_train)
+            y_pred = classifier.predict(X_test)
+            accuracy = accuracy_score(y_test, y_pred)
+            datum[index].append(accuracy)
+
+    # plot the graph
+    dpi = 218
+    plt.figure(num=1).set_size_inches(5120 / dpi, 2880 / dpi)  # 5120
+    colors = plt.rcParams["axes.prop_cycle"].by_key()["color"]
+
+    handles = []
+
+    labels = ["Naive Bayes", "Logistic Regression", "Random Forest (100 trees",
+              "Support Vector Machine (Linear)"]
+    for i in range(4):
+        color = colors[i % len(colors)]
+
+        line, = plt.plot(X, datum[i], marker="o", markersize=5, label=labels[i],
+                         color=color)
+        handles.append(line)
+
+    plt.xticks(fontsize=36)
+    plt.yticks(fontsize=36)
+
+    plt.title("4 Class Test Outcome", fontsize=48)
+    plt.xlabel("Data size (number of rows)", fontsize=36)
+    plt.ylabel("Accuracy", fontsize=36)
+    plt.legend(handles=handles, fontsize=36)
+
+    write_matplotlib_figure(from_root("images\\final\\to4c_trend.png"), plt)
+
+
+def to_4c_chi2_trend():
+    X = list(range(10, 200 + 1, 10))
+    datum = [[], [], [], []]
+
+    df = extract(from_root("sql\\test_outcome\\4_class.sql"))
+    for x in X:
+        print(x)
+
+        df_train, df_test = train_test_split(df, test_size=0.2)
+
+        vectorizer = CountVectorizer()
+        X_train, y_train, X_test, y_test, feature_names, _ \
+            = to_X_y(vectorizer, df_train, df_test, "test_outcome")
+
+        selection = SelectKBest(chi2, x)
+        X_train_new, X_test_new, _ = select(selection, X_train, y_train, X_test, feature_names)
+
+        for index, classifier in enumerate([
+            MultinomialNB(),
+            LogisticRegression(class_weight="balanced"),
+            RandomForestClassifier(n_estimators=100, class_weight="balanced"),
+            LinearSVC(class_weight="balanced")
+        ]):
+            classifier.fit(X_train_new, y_train)
+            y_pred = classifier.predict(X_test_new)
+            accuracy = accuracy_score(y_test, y_pred)
+            datum[index].append(accuracy)
+
+    # plot the graph
+    dpi = 218
+    plt.figure(num=1).set_size_inches(5120 / dpi, 2880 / dpi)  # 5120
+    colors = plt.rcParams["axes.prop_cycle"].by_key()["color"]
+
+    handles = []
+
+    labels = ["Naive Bayes", "Logistic Regression", "Random Forest (100 trees",
+              "Support Vector Machine (Linear)"]
+    for i in range(4):
+        color = colors[i % len(colors)]
+
+        line, = plt.plot(X, datum[i], marker="o", markersize=5, label=labels[i],
+                         color=color)
+        handles.append(line)
+
+    plt.yticks(fontsize=36)
+    plt.xticks(fontsize=36)
+    plt.title("4 Class Test Outcome", fontsize=48)
+    plt.xlabel("Number of features", fontsize=36)
+    plt.ylabel("Accuracy", fontsize=36)
+    plt.legend(handles=handles, fontsize=36)
+
+    write_matplotlib_figure(from_root("images\\final\\to4c_chi2_trend.png"), plt)
+
+
+if __name__ == "__main__":
+    print("Started executing script.\n")
+    start_time = datetime.now()
+
+    main()
+
+    print(f"\nExecution time: {datetime.now() - start_time}")
+    print("Finished executing script.")

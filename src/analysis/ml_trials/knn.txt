@@ -1,0 +1,33 @@
+import numpy as np
+
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.model_selection import KFold
+from sklearn.neighbors import KNeighborsClassifier
+
+from src.modules.vectorizer import to_X_y
+
+
+def knn(df, output, save_to):
+    accuracies = []
+
+    kf = KFold(n_splits=20, shuffle=True)
+    for index, (train_indices, test_indices) in enumerate(kf.split(df)):
+        print(index)
+
+        df_train = df.iloc[train_indices, :]
+        df_test = df.iloc[test_indices, :]
+
+        vectorizer = CountVectorizer()
+        X_train, y_train, X_test, y_test, _, _ \
+            = to_X_y(vectorizer, df_train, df_test, output)
+
+        classifier = KNeighborsClassifier()
+        classifier.fit(X_train, y_train)
+
+        y_pred = classifier.predict(X_test)
+
+        accuracy = np.mean(y_test == y_pred)
+        accuracies.append(accuracy)
+
+    print(np.mean(accuracies))
+    print(np.std(accuracies))

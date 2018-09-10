@@ -1,0 +1,34 @@
+Classifier: AdaBoostClassifier
+Params: {'algorithm': 'SAMME.R', 'base_estimator__class_weight': None, 'base_estimator__criterion': 'gini', 'base_estimator__max_depth': 1, 'base_estimator__max_features': None, 'base_estimator__max_leaf_nodes': None, 'base_estimator__min_impurity_decrease': 0.0, 'base_estimator__min_impurity_split': None, 'base_estimator__min_samples_leaf': 1, 'base_estimator__min_samples_split': 2, 'base_estimator__min_weight_fraction_leaf': 0.0, 'base_estimator__presort': False, 'base_estimator__random_state': None, 'base_estimator__splitter': 'best', 'base_estimator': DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=1,
+            max_features=None, max_leaf_nodes=None,
+            min_impurity_decrease=0.0, min_impurity_split=None,
+            min_samples_leaf=1, min_samples_split=2,
+            min_weight_fraction_leaf=0.0, presort=False, random_state=None,
+            splitter='best'), 'learning_rate': 1.0, 'n_estimators': 100, 'random_state': None}
+
+Labels: ['positive', 'negative']
+
+Training accuracy: 0.9993874459838731
+Training confusion matrix:
+[[40233    35]
+ [   20 49500]]
+
+Accuracy: 0.9709429885620733
+
+Precision: [0.9592 0.9881]
+Mean: 0.9736634277203071
+Std: 0.014422005761271894
+
+Recall: [0.9916 0.9430]
+Mean: 0.9673031649577688
+Std: 0.024289566823254727
+
+F1 score: [0.9751 0.9650]
+Mean: 0.9700861792311051
+Std: 0.00506265155424529
+
+Cohen Kappa score: 0.940195506065747
+Confusion matrix:
+[[51188   434]
+ [ 2175 35992]]
+

@@ -1,0 +1,22 @@
+Negative features:
+[('non reactive', -1.7361355642199865),
+ ('lgv 16', -1.306726139828564),
+ ('no hiv', -1.134688527397412),
+ ('no hiv rna', -1.1302833439605653),
+ ('no hcv', -1.0913815083523075),
+ ('no hcv rna', -1.0913815083523075),
+ ('moderate hemolysis', -1.0793386578279014),
+ ('no chlamydia', -0.9907198272750793),
+ ('no chlamydia trachomatis', -0.9907198272750793),
+ ('no bordetella', -0.985634983997023)]
+Positive features:
+[('reactive for', 1.3956293073343513),
+ ('reactive hbeag', 1.248576934409807),
+ ('reactive minimal', 1.1076742903249588),
+ ('reactive the', 1.1060238419489317),
+ ('reactive please', 1.0130436867721484),
+ ('1000 000', 0.9739202542501474),
+ ('positive for', 0.8591106302162685),
+ ('non reactive on', 0.7492088276499811),
+ ('neisseria gonorrhoeae', 0.7246001853526152),
+ ('reactive anti hbe', 0.7066664296438814)]

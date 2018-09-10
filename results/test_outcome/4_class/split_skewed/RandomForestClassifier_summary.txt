@@ -1,0 +1,33 @@
+Classifier: RandomForestClassifier
+Params: {'bootstrap': True, 'class_weight': None, 'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 100, 'n_jobs': 1, 'oob_score': False, 'random_state': None, 'verbose': 0, 'warm_start': False}
+
+Labels: ['positive', 'negative', 'indeterminate', '*missing']
+
+Training accuracy: 1.0
+Training confusion matrix:
+[[189   0   0   0]
+ [  0 151   0   0]
+ [  0   0  14   0]
+ [  0   0   0 799]]
+
+Accuracy: 0.9559990192816238
+
+Precision: [0.9717 0.9673 0.9361 0.9509]
+Mean: 0.9565186681556025
+Std: 0.01410088424652169
+
+Recall: [0.9143 0.8519 0.3871 0.9966]
+Mean: 0.7874494892481239
+Std: 0.23678326812186704
+
+F1 score: [0.9421 0.9059 0.5477 0.9732]
+Mean: 0.8422369562130049
+Std: 0.17171423523453785
+
+Cohen Kappa score: 0.9047647564377043
+Confusion matrix:
+[[17426   109    13  1512]
+ [  269 12878    14  1956]
+ [   93   212   557   577]
+ [  145   114    11 78316]]
+

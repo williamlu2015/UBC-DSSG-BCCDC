@@ -1,0 +1,22 @@
+Negative features:
+[('nonreactive', -6.482784858258455),
+ ('reactive', -6.375655690546344),
+ ('equivocal', -5.365136672299278),
+ ('indeterminate', -3.394834170068238),
+ ('negative', -2.6775844876733816),
+ ('detected', -2.1076682651629017),
+ ('indeterminant', -1.9521232745007306),
+ ('positive', -1.91344209729082),
+ ('pneumoniae', -1.670075171594558),
+ ('rna detected', -1.606584279507131)]
+Positive features:
+[('not calculated', 2.8306272566818547),
+ ('calculated', 2.8306272566818547),
+ ('not calculated the', 2.3600689623197493),
+ ('calculated the', 2.3600689623197493),
+ ('non reactive previous', 2.3075716397043147),
+ ('previous', 2.2358169058631554),
+ ('non reactive current', 2.0042237884317418),
+ ('previously', 1.8859457621185989),
+ ('missing', 1.7156945628291775),
+ ('susceptible', 1.6949377958355996)]

@@ -1,0 +1,33 @@
+Classifier: GradientBoostingClassifier
+Params: {'criterion': 'friedman_mse', 'init': None, 'learning_rate': 0.1, 'loss': 'deviance', 'max_depth': 3, 'max_features': None, 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 100, 'presort': 'auto', 'random_state': None, 'subsample': 1.0, 'verbose': 0, 'warm_start': False}
+
+Labels: ['positive', 'negative', 'indeterminate', '*missing']
+
+Training accuracy: 0.9879278728606357
+Training confusion matrix:
+[[12183     8     1    61]
+ [    4  1709     5     6]
+ [   14    16   346    20]
+ [   53    42     7  5157]]
+
+Accuracy: 0.8131477516059957
+
+Precision: [0.5835 0.9037 0.4699 0.8160]
+Mean: 0.6932728732140548
+Std: 0.1741361882248921
+
+Recall: [0.2234 0.0523 0.3347 0.9971]
+Mean: 0.40186054554477246
+Std: 0.358061652094054
+
+F1 score: [0.3231 0.0989 0.3909 0.8975]
+Mean: 0.427592496997229
+Std: 0.29202008794165774
+
+Cohen Kappa score: 0.1410349620897281
+Confusion matrix:
+[[  346    30    16  1157]
+ [   34   629    24 11338]
+ [  204    27   164    95]
+ [    9    10   145 55822]]
+

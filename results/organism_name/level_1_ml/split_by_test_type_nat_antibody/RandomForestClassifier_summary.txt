@@ -1,0 +1,47 @@
+Classifier: RandomForestClassifier
+Params: {'bootstrap': True, 'class_weight': None, 'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 100, 'n_jobs': 1, 'oob_score': False, 'random_state': None, 'verbose': 0, 'warm_start': False}
+
+Labels: None
+
+Training accuracy: 0.9828077753779698
+Training confusion matrix:
+[[2355    0    1    0    0    0    0    0    0    0    4    0    0    0    0    0]
+ [   0  246    0    0    0    0    0    0    0    0    0    0    0    0    0    0]
+ [   5    0  222    0    0    0    0    0    0    0    0    0    0    0    0    0]
+ [   0    0    0  178    0    0    0    0    1    1    0    2    0   10    0    0]
+ [   0    0    0    0 6882    0    0    0    0    0    0    0    0    0    0    0]
+ [   0    0    0    0    0  185    0    0    0    0    0    0    0    0    0    0]
+ [   0    0    0    0    0    0   36    0    0    0    0    0    0    0    0    0]
+ [   0    0    0    1    0    0    0  117    1    0    0    5    0   11    0    0]
+ [   0    0    0    3    0    0    0    1   98    0    0    2    1    3    0    0]
+ [   0    0    0    2    0    0    0    0    1  270    0    0    6    1    0    0]
+ [   2    0    0    0    0    0    0    0    0    0   52    0    0    0    0    0]
+ [   0    0    0    2    0    0    0    4    4    0    0  247    1   24    0    0]
+ [   0    0    0    2    0    0    0    0    1   11    0    2  112    7    0    0]
+ [   0    0    0   11    0    0    0   19    5    5    0   36    1  350    0    0]
+ [   0    0    0    0    0    0    0    0    0    0    0    0    0    0   24    0]
+ [   0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    2]]
+
+Accuracy: 0.9363486595776547
+
+Precision: [0.9372 0.0909 0.3333 0.0000 0.0000 0.0000]
+Mean: 0.22690397225629608
+Std: 0.3388146228878301
+
+Recall: [0.9992 0.0833 0.0244 0.0000 0.0000 0.0000]
+Mean: 0.18448739074986656
+Std: 0.3655425004172389
+
+F1 score: [0.9672 0.0870 0.0455 0.0000 0.0000 0.0000]
+Mean: 0.18326816048462344
+Std: 0.3520359853681286
+
+Cohen Kappa score: 0.005962090662905872
+Confusion matrix:
+[[12502    10     0     0     0     0]
+ [   11     1     0     0     0     0]
+ [   40     0     1     0     0     0]
+ [   35     0     0     0     0     0]
+ [  747     0     2     0     0     0]
+ [    5     0     0     0     0     0]]
+

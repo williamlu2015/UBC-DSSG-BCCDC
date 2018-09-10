@@ -1,0 +1,22 @@
+Negative features:
+[('reactive', -6.609631194365908),
+ ('nonreactive', -6.4994079905117506),
+ ('equivocal', -5.435138068606302),
+ ('indeterminate', -3.4209725804022995),
+ ('negative', -2.9047018642990787),
+ ('virus genotype', -2.5633821976259132),
+ ('detected', -2.332662577359494),
+ ('vaginalis seen', -2.2174814338891458),
+ ('no trichomonas', -2.0929254282598473),
+ ('rna detected', -1.8980534043462833)]
+Positive features:
+[('not calculated', 3.3530230038894233),
+ ('calculated', 3.3530230038894233),
+ ('calculated the', 3.117597719645228),
+ ('previous', 2.536073496015121),
+ ('reactive on', 2.3033001602655756),
+ ('previously', 2.0743720158286987),
+ ('was non', 1.9415836883017072),
+ ('reactive current', 1.8894530363693163),
+ ('susceptible', 1.7201664413975837),
+ ('missing', 1.6912144612380855)]

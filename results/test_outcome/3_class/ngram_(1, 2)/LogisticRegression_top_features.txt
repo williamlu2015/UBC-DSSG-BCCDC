@@ -1,0 +1,22 @@
+Negative features:
+[('reactive', -3.8393997762156014),
+ ('nonreactive', -3.6773246501121686),
+ ('of hcv', -2.316880423986015),
+ ('equivocal on', -1.7224252821826633),
+ ('was equivocal', -1.583002683957216),
+ ('no', -1.4287670899247362),
+ ('trichomonas', -1.412489740172756),
+ ('trichomonas vaginalis', -1.399664623242211),
+ ('vaginalis', -1.327472617691678),
+ ('reactive previous', -1.270397082030496)]
+Positive features:
+[('equivocal', 4.433205556579022),
+ ('indeterminate', 4.328021356903372),
+ ('was reactive', 1.9941015492909624),
+ ('borderline reactive', 1.9784090262366347),
+ ('borderline', 1.9784090262366347),
+ ('inconclusive', 1.9753346441516704),
+ ('64', 1.577142177386138),
+ ('128', 1.473453847082865),
+ ('test negative', 1.4616317285302065),
+ ('reactive on', 1.3939492037615884)]

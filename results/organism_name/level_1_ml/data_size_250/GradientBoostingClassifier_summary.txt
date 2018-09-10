@@ -1,0 +1,52 @@
+Classifier: GradientBoostingClassifier
+Params: {'criterion': 'friedman_mse', 'init': None, 'learning_rate': 0.1, 'loss': 'deviance', 'max_depth': 3, 'max_features': None, 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_impurity_split': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 100, 'presort': 'auto', 'random_state': None, 'subsample': 1.0, 'verbose': 0, 'warm_start': False}
+
+Labels: None
+
+Training accuracy: 1.0
+Training confusion matrix:
+[[96  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  8  0  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0 52  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  5  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  2  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  4  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0 16  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  2]]
+
+Accuracy: 0.92
+
+Precision: [0.8710 1.0000 1.0000 0.0000 1.0000 1.0000 0.0000 1.0000 0.0000 1.0000]
+Mean: 0.6870967741935484
+Std: 0.45139395614256905
+
+Recall: [1.0000 1.0000 1.0000 0.0000 1.0000 1.0000 0.0000 1.0000 0.0000 1.0000]
+Mean: 0.7
+Std: 0.45825756949558394
+
+F1 score: [0.9310 1.0000 1.0000 0.0000 1.0000 1.0000 0.0000 1.0000 0.0000 1.0000]
+Mean: 0.6931034482758621
+Std: 0.45419173351864367
+
+Cohen Kappa score: 0.8671978751660027
+Confusion matrix:
+[[27  0  0  0  0  0  0  0  0  0]
+ [ 0  1  0  0  0  0  0  0  0  0]
+ [ 0  0  1  0  0  0  0  0  0  0]
+ [ 1  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0 12  0  0  0  0  0]
+ [ 0  0  0  0  0  1  0  0  0  0]
+ [ 1  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  1  0  0]
+ [ 2  0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  3]]
+

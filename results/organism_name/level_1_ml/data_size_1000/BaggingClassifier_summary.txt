@@ -1,0 +1,71 @@
+Classifier: BaggingClassifier
+Params: {'base_estimator__class_weight': None, 'base_estimator__criterion': 'gini', 'base_estimator__max_depth': 1, 'base_estimator__max_features': None, 'base_estimator__max_leaf_nodes': None, 'base_estimator__min_impurity_decrease': 0.0, 'base_estimator__min_impurity_split': None, 'base_estimator__min_samples_leaf': 1, 'base_estimator__min_samples_split': 2, 'base_estimator__min_weight_fraction_leaf': 0.0, 'base_estimator__presort': False, 'base_estimator__random_state': None, 'base_estimator__splitter': 'best', 'base_estimator': DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=1,
+            max_features=None, max_leaf_nodes=None,
+            min_impurity_decrease=0.0, min_impurity_split=None,
+            min_samples_leaf=1, min_samples_split=2,
+            min_weight_fraction_leaf=0.0, presort=False, random_state=None,
+            splitter='best'), 'bootstrap': True, 'bootstrap_features': False, 'max_features': 1.0, 'max_samples': 1.0, 'n_estimators': 100, 'n_jobs': 1, 'oob_score': False, 'random_state': None, 'verbose': 0, 'warm_start': False}
+
+Labels: None
+
+Training accuracy: 0.68
+Training confusion matrix:
+[[378   0   0   0   0   0   0   0   0   8   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  6   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  8   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  6   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  6   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [ 19   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [ 11   0   0   0   0   0   0   0   0 166   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  6   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [ 35   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  6   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  7   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [ 11   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [ 23   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  8   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [ 71   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]]
+
+Accuracy: 0.735
+
+Precision: [0.6709 0.0000 0.0000 0.0000 0.0000 0.9762 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000]
+Mean: 0.10294228450874021
+Std: 0.27765560385908766
+
+Recall: [0.9907 0.0000 0.0000 0.0000 0.0000 0.9535 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000]
+Mean: 0.12150891110628124
+Std: 0.3215494891102143
+
+F1 score: [0.8000 0.0000 0.0000 0.0000 0.0000 0.9647 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000]
+Mean: 0.11029411764705883
+Std: 0.2932597783158384
+
+Cohen Kappa score: 0.5020668921458098
+Confusion matrix:
+[[106   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0]
+ [  1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  2   0   0   0   0  41   0   0   0   0   0   0   0   0   0   0]
+ [  1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  8   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [ 11   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [ 10   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]]
+

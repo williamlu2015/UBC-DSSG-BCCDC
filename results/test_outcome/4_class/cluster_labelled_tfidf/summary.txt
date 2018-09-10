@@ -1,0 +1,25 @@
+Cluster 0:
+*missing    9166
+positive       2
+Name: test_outcome, dtype: int64
+
+Cluster 1:
+*missing    48786
+positive        6
+negative        1
+Name: test_outcome, dtype: int64
+
+Cluster 2:
+positive         19128
+*missing         18557
+negative          4094
+indeterminate     1429
+Name: test_outcome, dtype: int64
+
+Cluster 3:
+negative         11173
+*missing          2876
+positive           113
+indeterminate       24
+Name: test_outcome, dtype: int64
+

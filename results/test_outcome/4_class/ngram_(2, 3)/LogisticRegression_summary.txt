@@ -1,0 +1,33 @@
+Classifier: LogisticRegression
+Params: {'C': 1.0, 'class_weight': None, 'dual': False, 'fit_intercept': True, 'intercept_scaling': 1, 'max_iter': 100, 'multi_class': 'ovr', 'n_jobs': 1, 'penalty': 'l2', 'random_state': None, 'solver': 'liblinear', 'tol': 0.0001, 'verbose': 0, 'warm_start': False}
+
+Labels: ['positive', 'negative', 'indeterminate', '*missing']
+
+Training accuracy: 0.9948961900221057
+Training confusion matrix:
+[[15198     6    33   114]
+ [    5 12089    21   116]
+ [   11    31  1050    84]
+ [   24    17     9 63476]]
+
+Accuracy: 0.98907719648043
+
+Precision: [0.9917 0.9860 0.8506 0.9913]
+Mean: 0.9548988859675955
+Std: 0.06027280912589507
+
+Recall: [0.9802 0.9770 0.8014 0.9968]
+Mean: 0.9388721194957126
+Std: 0.07970163983065374
+
+F1 score: [0.9859 0.9815 0.8253 0.9941]
+Mean: 0.9466873440523672
+Std: 0.07024024379509329
+
+Cohen Kappa score: 0.9772113339384162
+Confusion matrix:
+[[ 3821    11     9    57]
+ [   10  2967    16    44]
+ [    6    11   222    38]
+ [   16    20    14 15809]]
+

@@ -1,0 +1,29 @@
+Classifier: MultinomialNB
+Params: {'alpha': 1.0, 'class_prior': None, 'fit_prior': True}
+
+Labels: ['positive', 'negative']
+
+Training accuracy: 0.950602976858726
+Training confusion matrix:
+[[14396   986]
+ [  378 11853]]
+
+Accuracy: 0.9494495944380069
+
+Precision: [0.9777 0.9171]
+Mean: 0.9474308554273293
+Std: 0.030298639412431716
+
+Recall: [0.9310 0.9730]
+Mean: 0.9519769494057388
+Std: 0.02102272132195293
+
+F1 score: [0.9538 0.9442]
+Mean: 0.9490045025321174
+Std: 0.00476420855544385
+
+Cohen Kappa score: 0.898082828871755
+Confusion matrix:
+[[3600  267]
+ [  82 2955]]
+

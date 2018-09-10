@@ -1,0 +1,22 @@
+Negative features:
+[('reactive', -4.153815352154917),
+ ('nonreactive', -3.73101204590859),
+ ('no', -1.36890950625781),
+ ('of hcv', -1.2280521405668086),
+ ('evidence of hcv', -1.2071641764834578),
+ ('detected', -1.0252885062482746),
+ ('of hcv infection', -1.0010817275064992),
+ ('trichomonas', -0.989840564650872),
+ ('trichomonas vaginalis', -0.9886635010348148),
+ ('no trichomonas', -0.9799060250998314)]
+Positive features:
+[('equivocal', 4.31791958377324),
+ ('indeterminate', 3.804325287609285),
+ ('borderline reactive', 1.9832853456501793),
+ ('borderline', 1.9832853456501793),
+ ('inconclusive', 1.8928041778578768),
+ ('test negative', 1.7090436677247975),
+ ('64', 1.411403188231957),
+ ('128', 1.3934736476567384),
+ ('666', 1.282014946531168),
+ ('nonspecific reactivity', 0.9908622846367814)]

@@ -1,0 +1,17 @@
+Cluster 0:
+negative         14753
+positive         12458
+indeterminate     1424
+Name: test_outcome, dtype: int64
+
+Cluster 1:
+positive    6779
+negative      22
+Name: test_outcome, dtype: int64
+
+Cluster 2:
+negative         493
+indeterminate     29
+positive          12
+Name: test_outcome, dtype: int64
+

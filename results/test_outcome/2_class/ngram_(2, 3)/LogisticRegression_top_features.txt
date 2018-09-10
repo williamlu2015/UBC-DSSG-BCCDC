@@ -1,0 +1,22 @@
+Negative features:
+[('non reactive', -4.487815245366451),
+ ('no chlamydia', -2.8039613515423274),
+ ('no chlamydia trachomatis', -2.8039613515423274),
+ ('no bordetella', -2.778121973982452),
+ ('no bordetella pertussis', -2.778121973982452),
+ ('negative for', -2.698117256538632),
+ ('no hcv', -2.452483962505536),
+ ('no hcv rna', -2.452483962505536),
+ ('no diplococci', -2.2299489038085674),
+ ('no diplococci resembling', -2.2299489038085674)]
+Positive features:
+[('positive for', 2.5343696836594023),
+ ('non reactive on', 1.9071931362859216),
+ ('result was non', 1.5447940481819205),
+ ('iu ml', 1.5169448024706067),
+ ('reactive for', 1.472102425571526),
+ ('was non reactive', 1.4327448913529457),
+ ('was non', 1.4305976417774504),
+ ('virus type', 1.352908831234102),
+ ('organism identified as', 1.3507400650005836),
+ ('organism identified', 1.3507400650005836)]

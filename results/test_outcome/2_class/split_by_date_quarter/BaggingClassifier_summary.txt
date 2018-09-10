@@ -1,0 +1,34 @@
+Classifier: BaggingClassifier
+Params: {'base_estimator__class_weight': None, 'base_estimator__criterion': 'gini', 'base_estimator__max_depth': 1, 'base_estimator__max_features': None, 'base_estimator__max_leaf_nodes': None, 'base_estimator__min_impurity_decrease': 0.0, 'base_estimator__min_impurity_split': None, 'base_estimator__min_samples_leaf': 1, 'base_estimator__min_samples_split': 2, 'base_estimator__min_weight_fraction_leaf': 0.0, 'base_estimator__presort': False, 'base_estimator__random_state': None, 'base_estimator__splitter': 'best', 'base_estimator': DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=1,
+            max_features=None, max_leaf_nodes=None,
+            min_impurity_decrease=0.0, min_impurity_split=None,
+            min_samples_leaf=1, min_samples_split=2,
+            min_weight_fraction_leaf=0.0, presort=False, random_state=None,
+            splitter='best'), 'bootstrap': True, 'bootstrap_features': False, 'max_features': 1.0, 'max_samples': 1.0, 'n_estimators': 100, 'n_jobs': 1, 'oob_score': False, 'random_state': None, 'verbose': 0, 'warm_start': False}
+
+Labels: ['positive', 'negative']
+
+Training accuracy: 0.7926894462511694
+Training confusion matrix:
+[[37835  2433]
+ [16181 33339]]
+
+Accuracy: 0.6794373475592779
+
+Precision: [0.6448 0.9290]
+Mean: 0.7868935144785495
+Std: 0.14206973291585534
+
+Recall: [0.9849 0.2662]
+Mean: 0.6255865134974273
+Std: 0.3593617643685988
+
+F1 score: [0.7794 0.4138]
+Mean: 0.5966214238026072
+Std: 0.1827735468043383
+
+Cohen Kappa score: 0.2769193916376623
+Confusion matrix:
+[[50845   777]
+ [28006 10161]]
+
